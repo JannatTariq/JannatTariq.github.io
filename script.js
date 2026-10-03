@@ -25,7 +25,6 @@ hamburger.addEventListener("click", () => {
   hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
 });
 
-// Close mobile menu on link click
 mobileMenu.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("open");
@@ -61,4 +60,62 @@ if (window.matchMedia("(pointer: fine)").matches) {
     requestAnimationFrame(loop);
   };
   loop();
+}
+
+// ---- CONTACT FORM: AJAX submit + toast + reset ----
+const form = document.getElementById("contactForm");
+const toast = document.getElementById("toast");
+const toastText = toast.querySelector(".toast-text");
+const toastIcon = toast.querySelector(".toast-icon");
+let toastTimer;
+
+function showToast(message, type = "success") {
+  toastText.textContent = message;
+  toastIcon.textContent = type === "success" ? "✓" : "!";
+  toast.classList.toggle("error", type === "error");
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 4500);
+}
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.reset();
+        showToast("Message sent — I'll get back to you soon.", "success");
+      } else {
+        const err = await response.json().catch(() => ({}));
+        const msg =
+          err?.errors?.[0]?.message ||
+          "Something went wrong. Try again or email me directly.";
+        showToast(msg, "error");
+      }
+    } catch (err) {
+      showToast(
+        "Network error. Please try again or email me directly.",
+        "error",
+      );
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
 }
