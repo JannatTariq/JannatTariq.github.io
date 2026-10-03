@@ -1002,7 +1002,7 @@ img {
   }
 }
 
-/* ===== MARQUEE SPEED (single source of truth) ===== */
+/* Desktop default */
 .marquee-track {
   animation: scroll 40s linear infinite;
 }
@@ -1010,24 +1010,20 @@ img {
   animation: scroll 55s linear infinite;
 }
 
-.marquee:hover .marquee-track,
-.pill-marquee:hover .pill-track {
-  animation-play-state: paused;
-}
-
+/* Mobile: use the same @keyframes but a completely different animation declaration */
 @media (max-width: 980px) {
   .marquee-track {
-    animation: scroll 22s linear infinite;
+    animation: scroll 18s linear infinite !important;
   }
   .pill-track {
-    animation: scroll 28s linear infinite;
+    animation: scroll 22s linear infinite !important;
   }
 }
 @media (max-width: 600px) {
   .marquee-track {
-    animation: scroll 16s linear infinite;
+    animation: scroll 12s linear infinite !important;
   }
   .pill-track {
-    animation: scroll 20s linear infinite;
+    animation: scroll 16s linear infinite !important;
   }
 }
