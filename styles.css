@@ -1021,9 +1021,9 @@ img {
 }
 @media (max-width: 600px) {
   .marquee-track {
-    animation: scroll 3s linear infinite !important;
+    animation: scroll 5s linear infinite !important;
   }
   .pill-track {
-    animation: scroll 6s linear infinite !important;
+    animation: scroll 5s linear infinite !important;
   }
 }
