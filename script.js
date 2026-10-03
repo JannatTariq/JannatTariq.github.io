@@ -119,3 +119,21 @@ if (form) {
     }
   });
 }
+
+// Pause marquees when off-screen (saves CPU on mobile)
+const marqueeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const track = entry.target.querySelector(".marquee-track, .pill-track");
+      if (!track) return;
+      track.style.animationPlayState = entry.isIntersecting
+        ? "running"
+        : "paused";
+    });
+  },
+  { threshold: 0 },
+);
+
+document.querySelectorAll(".marquee, .pill-marquee").forEach((el) => {
+  marqueeObserver.observe(el);
+});
