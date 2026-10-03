@@ -24,13 +24,31 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a href="#top" class="logo">JT<span>.</span></a>
-        <nav>
+
+        <nav class="nav-desktop">
           <a href="#work">Work</a>
           <a href="#skills">Skills</a>
           <a href="#approach">Approach</a>
           <a href="#resume">Resume</a>
           <a href="#contact" class="nav-cta">Contact</a>
         </nav>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#approach">Approach</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
       </div>
     </header>
 
@@ -281,7 +299,7 @@
                   personalized recommendations.
                 </p>
                 <a
-                  href="https://github.com/JannatTariq"
+                  href="https://github.com/JannatTariq/Shaping-Homes"
                   target="_blank"
                   rel="noopener"
                   class="mini-link"
@@ -370,13 +388,13 @@
             <p class="section-eyebrow">// Resume</p>
             <h2 class="section-title">Download my resume.</h2>
             <p class="section-sub">
-              Mobile developer focus — Flutter, React Native, cross-platform
-              delivery and API integration.
+              Cross-platform mobile and web development, API integrations,
+              production delivery.
             </p>
           </div>
           <div class="resume-box reveal">
             <div class="resume-info">
-              <h3>Jannat Tariq — Mobile Developer</h3>
+              <h3>Jannat Tariq</h3>
               <p>
                 FAST NUCES CS graduate. 2+ years building and shipping
                 production apps.
@@ -402,29 +420,81 @@
               Open to mobile engineering and technical product roles.
             </p>
           </div>
-          <div class="contact-grid reveal">
-            <a href="mailto:jannattariq08@gmail.com" class="contact-card">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">jannattariq08@gmail.com</span>
-            </a>
-            <a
-              href="https://github.com/JannatTariq"
-              target="_blank"
-              rel="noopener"
-              class="contact-card"
+
+          <div class="contact-wrap">
+            <form
+              class="contact-form reveal"
+              action="https://formspree.io/f/xwlpgywp"
+              method="POST"
             >
-              <span class="contact-label">GitHub</span>
-              <span class="contact-value">github.com/JannatTariq</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/jannat-tariq-007aa724a"
-              target="_blank"
-              rel="noopener"
-              class="contact-card"
-            >
-              <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">jannat-tariq</span>
-            </a>
+              <div class="field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Tell me about the role or project..."
+                ></textarea>
+              </div>
+
+              <input
+                type="text"
+                name="_gotcha"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
+              <button type="submit" class="btn">Send message</button>
+            </form>
+
+            <aside class="contact-side reveal" data-delay="1">
+              <a href="mailto:jannattariq08@gmail.com" class="contact-card">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">jannattariq08@gmail.com</span>
+              </a>
+              <a
+                href="https://github.com/JannatTariq"
+                target="_blank"
+                rel="noopener"
+                class="contact-card"
+              >
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/JannatTariq</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/jannat-tariq-007aa724a"
+                target="_blank"
+                rel="noopener"
+                class="contact-card"
+              >
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">jannat-tariq</span>
+              </a>
+            </aside>
           </div>
         </div>
       </section>
