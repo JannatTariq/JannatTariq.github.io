@@ -6,25 +6,30 @@
     <title>Jannat Tariq — Software Developer</title>
     <meta
       name="description"
-      content="Software Developer building cross-platform mobile and web apps. Flutter, React Native, Node.js, health & fitness integrations."
+      content="Software developer shipping cross-platform mobile and web apps. Flutter, React Native, Node.js."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="noise"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
     <header class="nav">
       <div class="wrap nav-inner">
         <a href="#top" class="logo">JT<span>.</span></a>
         <nav>
-          <a href="#projects">Projects</a>
+          <a href="#work">Work</a>
           <a href="#skills">Skills</a>
+          <a href="#approach">Approach</a>
           <a href="#resume">Resume</a>
-          <a href="#contact" class="btn-sm">Contact</a>
+          <a href="#contact" class="nav-cta">Contact</a>
         </nav>
       </div>
     </header>
@@ -32,231 +37,256 @@
     <main id="top">
       <!-- HERO -->
       <section class="hero">
-        <div class="wrap">
-          <p class="eyebrow">// Software Developer · Lahore, PK</p>
-          <h1>
-            I build cross-platform apps that turn <em>health data</em> into real
-            products.
-          </h1>
-          <p class="lead">
-            2+ years shipping production web and mobile apps — Flutter, React
-            Native, Node.js. Integrated Strava, Garmin, Apple HealthKit, Stripe,
-            OpenAI. Comfortable owning a feature from client call to App Store
-            release.
-          </p>
-          <div class="cta">
-            <a href="#projects" class="btn">See projects</a>
-            <a href="#resume" class="btn ghost">Download resume</a>
+        <div class="wrap hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">// Software Developer · Lahore, PK</p>
+            <h1>I ship cross-platform <em>mobile and web apps.</em></h1>
+            <p class="hero-sub">
+              Flutter · React Native · Node.js · 2+ years shipping production
+              apps
+            </p>
+            <div class="cta">
+              <a href="#work" class="btn">See my work</a>
+              <a href="#resume" class="btn ghost">Resume</a>
+            </div>
+            <ul class="stats">
+              <li><strong>2+</strong><span>years experience</span></li>
+              <li><strong>2</strong><span>stores published</span></li>
+              <li><strong>5+</strong><span>shipped products</span></li>
+            </ul>
           </div>
-          <ul class="meta">
-            <li><span>2+</span> yrs experience</li>
-            <li><span>5</span> shipped projects</li>
-            <li><span>2</span> stores published</li>
-          </ul>
+
+          <div class="hero-visual reveal" data-delay="1">
+            <div class="phone hero-phone">
+              <div class="phone-notch"></div>
+              <img src="assets/kale-1.png" alt="Kale — healthy years screen" />
+            </div>
+            <div class="hero-badge">
+              Live on<br /><strong>App Store</strong> & <strong>Play</strong>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- PROJECTS -->
-      <section id="projects" class="section">
-        <div class="wrap">
-          <h2 class="section-title">Projects</h2>
-          <p class="section-sub">Live products, published apps, real users.</p>
+      <!-- TRUST MARQUEE -->
+      <section class="marquee-section">
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>App Store</span><span>·</span> <span>Google Play</span
+            ><span>·</span> <span>Strava</span><span>·</span> <span>Garmin</span
+            ><span>·</span> <span>Apple HealthKit</span><span>·</span>
+            <span>Stripe</span><span>·</span> <span>OpenAI</span><span>·</span>
+            <span>Node.js</span><span>·</span> <span>Flutter</span
+            ><span>·</span> <span>React Native</span><span>·</span>
+            <span>App Store</span><span>·</span> <span>Google Play</span
+            ><span>·</span> <span>Strava</span><span>·</span> <span>Garmin</span
+            ><span>·</span> <span>Apple HealthKit</span><span>·</span>
+            <span>Stripe</span><span>·</span> <span>OpenAI</span><span>·</span>
+            <span>Node.js</span><span>·</span> <span>Flutter</span
+            ><span>·</span> <span>React Native</span><span>·</span>
+          </div>
+        </div>
+      </section>
 
-          <div class="grid">
-            <!-- KALE -->
-            <article class="card feature">
-              <div class="card-media">
+      <!-- WORK -->
+      <section id="work" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="section-eyebrow">// Selected work</p>
+            <h2 class="section-title">Products I've built and shipped.</h2>
+          </div>
+
+          <!-- KALE -->
+          <article class="feature reveal">
+            <div class="feature-media">
+              <div class="phone phone-sm">
+                <div class="phone-notch"></div>
                 <img
                   src="assets/kale-1.png"
-                  alt="Kale — Longevity Level screen"
+                  alt="Kale — healthy years screen"
                 />
+              </div>
+              <div class="phone phone-sm phone-offset">
+                <div class="phone-notch"></div>
                 <img
                   src="assets/kale-2.png"
-                  alt="Kale — Cardio assessment screen"
-                  class="thumb"
+                  alt="Kale — Kalettes marketplace"
                 />
               </div>
-              <div class="card-body">
-                <div class="tags">
-                  <span>React Native</span><span>Next.js</span
-                  ><span>Firebase</span><span>Health APIs</span>
-                </div>
-                <h3>Kale — Longevity Life Insurance</h3>
-                <p>
-                  A life insurance product that prices your premium on fitness,
-                  not just age. Built the mobile app and web platform that pull
-                  Garmin, Strava and Apple Health data, compute a 1–10 Longevity
-                  Level from cardio, strength and knowledge, and translate it
-                  into premium discounts and healthy-years projections.
-                </p>
-                <ul class="bullets">
-                  <li>
-                    Health data ingestion from Garmin, Strava, Apple HealthKit
-                  </li>
-                  <li>
-                    Longevity scoring engine + quarterly reassessment flow
-                  </li>
-                  <li>Insurance premium calculator and rewards store</li>
-                </ul>
-                <div class="links">
-                  <a
-                    href="https://apps.apple.com/gb/app/kale-longevity-insurance/id6782074677"
-                    target="_blank"
-                    rel="noopener"
-                    >App Store ↗</a
-                  >
-                  <a
-                    href="https://play.google.com/store/apps/details?id=insure.kale.mobile"
-                    target="_blank"
-                    rel="noopener"
-                    >Google Play ↗</a
-                  >
-                  <a
-                    href="https://www.kale.insure/"
-                    target="_blank"
-                    rel="noopener"
-                    >Website ↗</a
-                  >
-                </div>
+            </div>
+            <div class="feature-copy">
+              <div class="tags">
+                <span>React Native</span><span>Next.js</span
+                ><span>Firebase</span><span>Health APIs</span>
               </div>
-            </article>
+              <h3>Kale — Longevity Life Insurance</h3>
+              <p class="feature-lead">
+                Life insurance that prices your premium on fitness, not just
+                age. Connect Garmin, Strava or Apple Health and Kale computes a
+                1–10 Longevity Level from cardio, strength and health knowledge
+                — then turns it into real premium discounts.
+              </p>
+              <ul class="bullets">
+                <li>
+                  Health data ingestion across Garmin, Strava and Apple
+                  HealthKit
+                </li>
+                <li>Longevity scoring engine with quarterly reassessment</li>
+                <li>
+                  Kalettes rewards marketplace — points earned from fitness,
+                  spent on gear, coaching and blood panels
+                </li>
+                <li>Insurance premium calculator and family cover flows</li>
+              </ul>
+              <div class="links">
+                <a
+                  href="https://apps.apple.com/gb/app/kale-longevity-insurance/id6782074677"
+                  target="_blank"
+                  rel="noopener"
+                  >App Store ↗</a
+                >
+                <a
+                  href="https://play.google.com/store/apps/details?id=insure.kale.mobile"
+                  target="_blank"
+                  rel="noopener"
+                  >Google Play ↗</a
+                >
+                <a
+                  href="https://www.kale.insure/"
+                  target="_blank"
+                  rel="noopener"
+                  >Website ↗</a
+                >
+              </div>
+            </div>
+          </article>
 
-            <!-- ATHLETE -->
-            <article class="card feature">
-              <div class="card-media">
+          <!-- ATHLETE -->
+          <article class="feature feature-flip reveal">
+            <div class="feature-media">
+              <div class="phone phone-sm">
+                <div class="phone-notch"></div>
                 <img
                   src="assets/athlete-1.png"
                   alt="Athlete — Level 7 dashboard"
                 />
-                <img
-                  src="assets/athlete-2.png"
-                  alt="Athlete — Cardio performance summary"
-                  class="thumb"
-                />
               </div>
-              <div class="card-body">
-                <div class="tags">
-                  <span>Flutter</span><span>Dart</span><span>Strava</span
-                  ><span>Garmin</span><span>HealthKit</span>
+              <div class="phone phone-sm phone-offset">
+                <div class="phone-notch"></div>
+                <img src="assets/athlete-2.png" alt="Athlete — splash" />
+              </div>
+            </div>
+            <div class="feature-copy">
+              <div class="tags">
+                <span>Flutter</span><span>Dart</span><span>Strava</span
+                ><span>Garmin</span><span>HealthKit</span>
+              </div>
+              <h3>Athlete — Train for Life</h3>
+              <p class="feature-lead">
+                A cross-platform fitness app that translates your training into
+                projected lifespan and healthspan gains. Athlete Level is scored
+                from cardio fitness, functional strength and evidence-based
+                health knowledge — not vanity metrics.
+              </p>
+              <ul class="bullets">
+                <li>
+                  VO₂ max, pace and endurance mapped to longevity projections
+                </li>
+                <li>Functional strength assessment module</li>
+                <li>Live on Apple App Store and Google Play</li>
+              </ul>
+              <div class="links">
+                <a
+                  href="https://apps.apple.com/gb/app/life-athlete/id6749262223"
+                  target="_blank"
+                  rel="noopener"
+                  >App Store ↗</a
+                >
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.mycompany.athlete"
+                  target="_blank"
+                  rel="noopener"
+                  >Google Play ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- SMALL PROJECTS -->
+          <div class="mini-grid">
+            <article class="mini reveal">
+              <div class="mini-visual mini-wallet">
+                <div class="mini-glyph">$</div>
+                <div class="mini-rings">
+                  <span></span><span></span><span></span>
                 </div>
-                <h3>Athlete — Train for Life</h3>
+              </div>
+              <div class="mini-body">
+                <div class="tags"><span>Node.js</span><span>MongoDB</span></div>
+                <h4>Health Wallet</h4>
                 <p>
-                  A cross-platform fitness app that translates your training
-                  into projected lifespan and healthspan gains. Athlete Level is
-                  computed from cardio fitness, functional strength and
-                  evidence-based health knowledge — not vanity metrics.
+                  Digital health wallet for employees, organizations and
+                  providers — automated quarterly allocations, scheduled jobs
+                  and auditable financial workflows.
                 </p>
-                <ul class="bullets">
-                  <li>VO₂ max, pace and endurance → longevity projections</li>
-                  <li>Functional strength assessment module</li>
-                  <li>Published to Apple App Store and Google Play</li>
-                </ul>
-                <div class="links">
-                  <a
-                    href="https://apps.apple.com/gb/app/life-athlete/id6749262223"
-                    target="_blank"
-                    rel="noopener"
-                    >App Store ↗</a
-                  >
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.mycompany.athlete"
-                    target="_blank"
-                    rel="noopener"
-                    >Google Play ↗</a
-                  >
-                </div>
+                <a
+                  href="https://app.coastalhsa.ca/"
+                  target="_blank"
+                  rel="noopener"
+                  class="mini-link"
+                  >Live app ↗</a
+                >
               </div>
             </article>
 
-            <!-- ANCHORSHARELOCK -->
-            <article class="card">
-              <div class="card-media placeholder">
-                <span class="placeholder-label">AnchorShareLock</span>
+            <article class="mini reveal">
+              <div class="mini-visual mini-anchor">
+                <div class="mini-grid-pattern"></div>
+                <div class="mini-glyph mini-glyph-anchor">🔒</div>
               </div>
-              <div class="card-body">
-                <div class="tags">
-                  <span>React</span><span>Node.js</span><span>Stripe</span>
-                </div>
-                <h3>AnchorShareLock</h3>
+              <div class="mini-body">
+                <div class="tags"><span>React</span><span>Stripe</span></div>
+                <h4>AnchorShareLock</h4>
                 <p>
-                  Key-sharing made easy. A platform for anchoring lockboxes to
-                  shared walls so Airbnb hosts, real estate agents, service
-                  providers and fleet managers can hand off keys securely — no
-                  more "creative" solutions.
+                  Key-sharing platform for anchoring lockboxes to shared walls.
+                  Role-based workflows for Admin, Customer and Franchisee with
+                  Stripe billing and automated revenue sharing.
                 </p>
-                <ul class="bullets">
-                  <li>
-                    Role-based workflows for Admin, Customer and Franchisee
-                  </li>
-                  <li>
-                    Stripe subscription billing and automated revenue sharing
-                    for wall hosts
-                  </li>
-                  <li>Location search, slot booking and access management</li>
-                </ul>
-                <div class="links">
-                  <a
-                    href="https://anchorsharelock.com/"
-                    target="_blank"
-                    rel="noopener"
-                    >Live site ↗</a
-                  >
-                </div>
+                <a
+                  href="https://anchorsharelock.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="mini-link"
+                  >Live site ↗</a
+                >
               </div>
             </article>
 
-            <!-- HEALTH WALLET -->
-            <article class="card">
-              <div class="card-media placeholder">
-                <span class="placeholder-label">Health Wallet</span>
-              </div>
-              <div class="card-body">
-                <div class="tags">
-                  <span>Node.js</span><span>MongoDB</span><span>Workflows</span>
-                </div>
-                <h3>Health Wallet</h3>
-                <p>
-                  Digital health wallet serving employees, organizations,
-                  administrators and healthcare providers. Built automated
-                  quarterly allocations, scheduled background jobs and annual
-                  account resets with auditable financial workflows.
-                </p>
-                <div class="links">
-                  <a
-                    href="https://app.coastalhsa.ca/"
-                    target="_blank"
-                    rel="noopener"
-                    >Live app ↗</a
-                  >
+            <article class="mini reveal">
+              <div class="mini-visual mini-homes">
+                <div class="mini-house">
+                  <div class="roof"></div>
+                  <div class="wall"><span></span><span></span></div>
                 </div>
               </div>
-            </article>
-
-            <!-- SHAPING HOMES -->
-            <article class="card">
-              <div class="card-media placeholder">
-                <span class="placeholder-label">Shaping Homes</span>
-              </div>
-              <div class="card-body">
+              <div class="mini-body">
                 <div class="tags">
                   <span>React Native</span><span>Express</span
                   ><span>OpenAI</span>
                 </div>
-                <h3>Shaping Homes</h3>
+                <h4>Shaping Homes</h4>
                 <p>
                   Cross-platform mobile app with AI-powered features. Built the
-                  REST API layer and backend services in Node.js + Express,
-                  integrated OpenAI for personalized recommendations, and
-                  connected frontend and backend workflows.
+                  REST API layer and backend services, integrated OpenAI for
+                  personalized recommendations.
                 </p>
-                <div class="links">
-                  <a
-                    href="https://github.com/JannatTariq"
-                    target="_blank"
-                    rel="noopener"
-                    >GitHub ↗</a
-                  >
-                </div>
+                <a
+                  href="https://github.com/JannatTariq"
+                  target="_blank"
+                  rel="noopener"
+                  class="mini-link"
+                  >GitHub ↗</a
+                >
               </div>
             </article>
           </div>
@@ -266,121 +296,135 @@
       <!-- SKILLS -->
       <section id="skills" class="section alt">
         <div class="wrap">
-          <h2 class="section-title">Skills</h2>
-          <p class="section-sub">What I actually use day to day.</p>
-          <div class="skills">
-            <div>
-              <h4>Mobile</h4>
-              <p>Flutter, Dart, React Native, Cross-platform UI</p>
+          <div class="section-head reveal">
+            <p class="section-eyebrow">// Stack</p>
+            <h2 class="section-title">What I work with.</h2>
+          </div>
+
+          <div class="pill-marquee">
+            <div class="pill-track">
+              <span>Flutter</span><span>Dart</span><span>React Native</span
+              ><span>React</span><span>Next.js</span> <span>Node.js</span
+              ><span>Express</span><span>MongoDB</span><span>Firebase</span
+              ><span>REST APIs</span> <span>Stripe</span><span>OpenAI</span
+              ><span>Gemini</span><span>Xero</span><span>Plooto</span>
+              <span>Strava API</span><span>Garmin API</span
+              ><span>Apple HealthKit</span> <span>Git</span><span>Postman</span
+              ><span>Figma</span><span>Xcode</span><span>Android Studio</span>
+              <span>Flutter</span><span>Dart</span><span>React Native</span
+              ><span>React</span><span>Next.js</span> <span>Node.js</span
+              ><span>Express</span><span>MongoDB</span><span>Firebase</span
+              ><span>REST APIs</span> <span>Stripe</span><span>OpenAI</span
+              ><span>Gemini</span><span>Xero</span><span>Plooto</span>
+              <span>Strava API</span><span>Garmin API</span
+              ><span>Apple HealthKit</span> <span>Git</span><span>Postman</span
+              ><span>Figma</span><span>Xcode</span><span>Android Studio</span>
             </div>
-            <div>
-              <h4>Frontend</h4>
-              <p>React, Next.js, HTML, CSS, JavaScript</p>
-            </div>
-            <div>
-              <h4>Backend</h4>
-              <p>Node.js, Express.js, MongoDB, REST APIs</p>
-            </div>
-            <div>
-              <h4>Integrations</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPROACH -->
+      <section id="approach" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="section-eyebrow">// How I work</p>
+            <h2 class="section-title">Three things I do well.</h2>
+          </div>
+          <div class="approach">
+            <div class="approach-card reveal">
+              <div class="approach-num">01</div>
+              <h4>Client-facing delivery</h4>
               <p>
-                Stripe, OpenAI, Gemini, Xero, Plooto, Strava, Garmin, Apple
-                HealthKit
+                Gather requirements directly from clients, translate business
+                needs into technical specs, and keep them updated through
+                development, testing and release.
               </p>
             </div>
-            <div>
-              <h4>Data</h4>
+            <div class="approach-card reveal" data-delay="1">
+              <div class="approach-num">02</div>
+              <h4>Cross-platform engineering</h4>
               <p>
-                Database design, data workflows, background jobs, business logic
+                Ship the same product across iOS, Android and web — Flutter,
+                React Native, Next.js — without duplicating business logic or UX
+                debt.
               </p>
             </div>
-            <div>
-              <h4>Tools</h4>
+            <div class="approach-card reveal" data-delay="2">
+              <div class="approach-num">03</div>
+              <h4>Integrations & data workflows</h4>
               <p>
-                Git, GitHub, Firebase, Postman, Figma, Xcode, Android Studio
+                Wire up third-party APIs, health platforms and payment
+                providers. Design backend workflows and scheduled jobs that hold
+                up in production.
               </p>
-            </div>
-            <div>
-              <h4>Process</h4>
-              <p>
-                Requirements gathering, SDLC, UAT, client communication,
-                cross-functional collaboration
-              </p>
-            </div>
-            <div>
-              <h4>Languages</h4>
-              <p>Dart, JavaScript, Python, C++</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- RESUME -->
-      <section id="resume" class="section">
+      <section id="resume" class="section alt">
         <div class="wrap">
-          <h2 class="section-title">Resume</h2>
-          <p class="section-sub">
-            Pick the version that fits the role you're hiring for.
-          </p>
-
-          <div class="tabs" role="tablist">
-            <button class="tab active" data-role="mobile">
-              Mobile Developer
-            </button>
-            <button class="tab" data-role="pm">Project Manager</button>
-            <button class="tab" data-role="ie">Implementation Engineer</button>
-            <button class="tab" data-role="general">General</button>
+          <div class="section-head reveal">
+            <p class="section-eyebrow">// Resume</p>
+            <h2 class="section-title">Download my resume.</h2>
+            <p class="section-sub">
+              Mobile developer focus — Flutter, React Native, cross-platform
+              delivery and API integration.
+            </p>
           </div>
-
-          <div class="resume-box">
-            <div>
-              <h3 id="resume-title">Mobile Developer</h3>
-              <p id="resume-desc">
-                Flutter & React Native focus. Health/fitness API integrations,
-                cross-platform app delivery, App Store & Play Store releases.
+          <div class="resume-box reveal">
+            <div class="resume-info">
+              <h3>Jannat Tariq — Mobile Developer</h3>
+              <p>
+                FAST NUCES CS graduate. 2+ years building and shipping
+                production apps.
               </p>
             </div>
             <a
-              id="resume-link"
               class="btn"
-              href="resumes/Jannat_Tariq_MobileDev.pdf"
+              href="resumes/Jannat_Tariq_MobileDev_Resume.pdf"
               download
+              >Download PDF</a
             >
-              Download PDF
-            </a>
-          </div>
-
-          <div class="resume-preview">
-            <iframe
-              id="resume-frame"
-              src="resumes/Jannat_Tariq_MobileDev.pdf"
-              title="Resume preview"
-            ></iframe>
           </div>
         </div>
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="section alt">
-        <div class="wrap contact">
-          <h2 class="section-title">Get in touch</h2>
-          <p class="section-sub">
-            Open to mobile, product and implementation roles.
-          </p>
-          <div class="contact-links">
-            <a href="mailto:jannattariq08@gmail.com">jannattariq08@gmail.com</a>
+      <section id="contact" class="section contact">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="section-eyebrow">// Contact</p>
+            <h2 class="section-title">Let's build something.</h2>
+            <p class="section-sub">
+              Open to mobile engineering and technical product roles.
+            </p>
+          </div>
+          <div class="contact-grid reveal">
+            <a href="mailto:jannattariq08@gmail.com" class="contact-card">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">jannattariq08@gmail.com</span>
+            </a>
             <a
               href="https://github.com/JannatTariq"
               target="_blank"
               rel="noopener"
-              >github.com/JannatTariq</a
+              class="contact-card"
             >
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/JannatTariq</span>
+            </a>
             <a
               href="https://linkedin.com/in/jannat-tariq-007aa724a"
               target="_blank"
               rel="noopener"
-              >LinkedIn</a
+              class="contact-card"
             >
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">jannat-tariq</span>
+            </a>
           </div>
         </div>
       </section>

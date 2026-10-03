@@ -1,44 +1,45 @@
-// Year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Resume tabs
-const resumes = {
-  mobile: {
-    title: "Mobile Developer",
-    desc: "Flutter & React Native focus. Health/fitness API integrations, cross-platform app delivery, App Store & Play Store releases.",
-    file: "resumes/Jannat_Tariq_MobileDev.pdf",
+// Scroll reveal
+const reveals = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      }
+    });
   },
-  pm: {
-    title: "Project Manager",
-    desc: "Requirements gathering, feature planning, SDLC coordination, client communication, UAT and delivery across multiple projects.",
-    file: "resumes/Jannat_Tariq_PM.pdf",
-  },
-  ie: {
-    title: "Implementation Engineer",
-    desc: "Client-facing implementation, workflow configuration, API integrations, production support and technical troubleshooting.",
-    file: "resumes/Jannat_Tariq_IE.pdf",
-  },
-  general: {
-    title: "General Software Developer",
-    desc: "Broad software development profile covering web, mobile, backend, integrations and client delivery.",
-    file: "resumes/Jannat_Tariq_General.pdf",
-  },
-};
+  { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+);
+reveals.forEach((el) => io.observe(el));
 
-const tabs = document.querySelectorAll(".tab");
-const titleEl = document.getElementById("resume-title");
-const descEl = document.getElementById("resume-desc");
-const linkEl = document.getElementById("resume-link");
-const frameEl = document.getElementById("resume-frame");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((t) => t.classList.remove("active"));
-    tab.classList.add("active");
-    const r = resumes[tab.dataset.role];
-    titleEl.textContent = r.title;
-    descEl.textContent = r.desc;
-    linkEl.href = r.file;
-    frameEl.src = r.file;
+// Cursor glow (desktop only)
+if (window.matchMedia("(pointer: fine)").matches) {
+  const glow = document.createElement("div");
+  glow.style.cssText = `
+    position: fixed; pointer-events: none; z-index: 30;
+    width: 380px; height: 380px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(52,211,153,.09), transparent 65%);
+    transform: translate(-50%, -50%); transition: opacity .3s;
+    left: 0; top: 0; opacity: 0;
+  `;
+  document.body.appendChild(glow);
+  let mx = 0,
+    my = 0,
+    gx = 0,
+    gy = 0;
+  window.addEventListener("mousemove", (e) => {
+    mx = e.clientX;
+    my = e.clientY;
+    glow.style.opacity = "1";
   });
-});
+  const loop = () => {
+    gx += (mx - gx) * 0.12;
+    gy += (my - gy) * 0.12;
+    glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%, -50%)`;
+    requestAnimationFrame(loop);
+  };
+  loop();
+}
